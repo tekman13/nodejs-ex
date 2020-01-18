@@ -115,6 +115,9 @@ app.use(function(err, req, res, next){
   res.status(500).send('Something bad happened!');
 });
 
+// static handling
+app.use(express.static('public'));
+
 initDb(function(err){
   console.log('Error connecting to Mongo. Message:\n'+err);
 });
